@@ -1,0 +1,18 @@
+{
+  "name": "berlin-clock",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "Kyllian-Delbauche, Sohib-ElHemdi, Sebastian-Silvestrean",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^5.4.0"
+  },
+  "dependencies": {
+    "tdd-ipl": "file:"
+  }
+}
