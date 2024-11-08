@@ -7,57 +7,51 @@ const hours = date.getHours();
 const minutes = date.getMinutes(); 
 const seconds = date.getSeconds(); 
 
-describe("A suite of test for the demo function of the main class", function() { 
+describe("testing the first line of minutes", function() { 
 
         // arrange
         let main = new Main();
 
         it("should return the first line of minutes", function() {
             // act
-            let result = main.firstLineOfMinutes(0);
+            let result = main.getFirstLineOfMinutes(0);
             // assert
             expect(result).toBe("-----------");
         });
 
         it("should return the first line of minutes", function() {
-            // act
-            let result = main.firstLineOfMinutes(5);
-            // assert
+            let result = main.getFirstLineOfMinutes(5);
+
             expect(result).toBe("Y----------");
         });
 
         it("should return the first line of minutes", function() {
-            // act
-            let result = main.firstLineOfMinutes(10);
-            // assert
+            let result = main.getFirstLineOfMinutes(10);
+
             expect(result).toBe("YY---------");
         });
 
         it("should return the first line of minutes", function() {
-            // act
-            let result = main.firstLineOfMinutes(15);
-            // assert
+            let result = main.getFirstLineOfMinutes(15);
+
             expect(result).toBe("YYY--------");
         });
 
         it("should return the first line of minutes", function() {
-            // act
-            let result = main.firstLineOfMinutes(20);
-            // assert
+            let result = main.getFirstLineOfMinutes(20);
+
             expect(result).toBe("YYYY-------");
         });
 
         it("should return the first line of minutes", function() {
-            // act
-            let result = main.firstLineOfMinutes(5 * 11);
-            // assert
+            let result = main.getFirstLineOfMinutes(5 * 11);
+
             expect(result).toBe("YYYYYYYYYYY");
         });
 
         it("should return the first line of minutes", function() {
-            // act
-            let result = main.firstLineOfMinutes(minutes); 
-            // assert
+            let result = main.getFirstLineOfMinutes(minutes); 
+
             expect(result).toBe("YYYYYYY----");
         });
 
