@@ -233,86 +233,86 @@ describe("testing the first line of hours", function () {
         // act
         let result = main.firstLineOfHours(0);
 
-        expect(main.firstLineOfHours(0)).toBe('----');
+        expect(result).toBe('----');
     });
 
     it("1 should return '----'", function () {
         let result = main.firstLineOfHours(1);
 
-        expect(main.firstLineOfHours(1)).toBe('----');
+        expect(result).toBe('----');
     });
 
     it("2 should return '----'", function () {
         let result = main.firstLineOfHours(2);
 
-        expect(main.firstLineOfHours(2)).toBe('----');
+        expect(result).toBe('----');
     });
 
     it("3 should return '----'", function () {
         let result = main.firstLineOfHours(3);
 
-        expect(main.firstLineOfHours(3)).toBe('----');
+        expect(result).toBe('----');
     });
 
     it("4 should return '----'", function () {
         let result = main.firstLineOfHours(4);
 
-        expect(main.firstLineOfHours(4)).toBe('----');
+        expect(result).toBe('----');
     });
 
     it("5 should return 'R---'", function () {
         let result = main.firstLineOfHours(5);
 
-        expect(main.firstLineOfHours(5)).toBe('R---');
+        expect(result).toBe('R---');
     });
 
     it("6 should return 'R---'", function () {
         let result = main.firstLineOfHours(6);
 
-        expect(main.firstLineOfHours(6)).toBe('R---');
+        expect(result).toBe('R---');
     });
 
     it("9 should return 'R---'", function () {
         let result = main.firstLineOfHours(9);
 
-        expect(main.firstLineOfHours(9)).toBe('R---');
+        expect(result).toBe('R---');
     });
 
     it("10 should return 'RR--'", function () {
 
         let result = main.firstLineOfHours(10);
 
-        expect(main.firstLineOfHours(10)).toBe('RR--');
+        expect(result).toBe('RR--');
     });
 
     it("14 should return 'RR--'", function () {
         let result = main.firstLineOfHours(14);
 
-        expect(main.firstLineOfHours(14)).toBe('RR--');
+        expect(result).toBe('RR--');
     });
 
     it("15 should return 'RRR-'", function () {
         let result = main.firstLineOfHours(15);
 
-        expect(main.firstLineOfHours(15)).toBe('RRR-');
+        expect(result).toBe('RRR-');
     });
 
     it("19 should return 'RRR-'", function () {
         let result = main.firstLineOfHours(19);
 
-        expect(main.firstLineOfHours(19)).toBe('RRR-');
+        expect(result).toBe('RRR-');
     });
 
     it("20 should return 'RRRR'", function () {
         let result = main.firstLineOfHours(20);
 
-        expect(main.firstLineOfHours(20)).toBe('RRRR');
+        expect(result).toBe('RRRR');
     });
 
     it("23 should return 'RRRR'", function () {
         let result = main.firstLineOfHours(23);
 
-        expect(main.firstLineOfHours(23)).toBe('RRRR');
+        expect(result).toBe('RRRR');
     });
 
     it("hours should return 'RRR-'", function () {
@@ -329,27 +329,39 @@ describe("testing the line of seconds", function () {
     let main = new Main();
 
     it("0 should return '-", function(){
-        expect(main.lineOfSeconds(0)).toBe("-");
+      let result = main.lineOfSeconds(0);
+
+      expect(result).toBe("-");
     });
 
     it("1 should return 'Y", function(){
-        expect(main.lineOfSeconds(1)).toBe("Y");
+      let result = main.lineOfSeconds(1);
+
+      expect(result).toBe("Y");
     });
 
     it("2 should return '-", function(){
-        expect(main.lineOfSeconds(2)).toBe("-");
+      let result = main.lineOfSeconds(2);
+
+      expect(result).toBe("-");
     });
 
     it("3 should return 'Y", function(){
-        expect(main.lineOfSeconds(3)).toBe("Y");
+      let result = main.lineOfSeconds(3);
+
+      expect(result).toBe("Y");
     });
 
     it("59 should return 'Y", function(){
-        expect(main.lineOfSeconds(59)).toBe("Y");
+      let result = main.lineOfSeconds(59);
+
+      expect(result).toBe("Y");
     });
 
     it("seconds should return 'Y", function(){
-        expect(main.lineOfSeconds(seconds)).toBe("Y"); // seconds = 59
+      let result = main.lineOfSeconds(seconds); // seconds = 59
+
+      expect(result).toBe("Y"); // seconds = 59
     });
 });
 
