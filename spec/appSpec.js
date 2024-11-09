@@ -321,3 +321,13 @@ describe("testing the first line of hours", function () {
     });
 
 });
+
+// LINE OF SECONDS
+describe("testing the line of seconds", function () {
+    // arrange
+    let main = new Main();
+
+    it("0 should return '-", function(){
+        expect(main.lineOfSeconds(0)).toBe("-");
+    });
+});

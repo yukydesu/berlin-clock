@@ -51,4 +51,9 @@ export class Main {
         if (minutes < 24) return "RRRR";
 
     }
+
+    // LINE OF SECONDS
+    lineOfSeconds(seconds) {
+        if (seconds === 0) return "-";
+    }
 }
