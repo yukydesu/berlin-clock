@@ -14,46 +14,90 @@ describe("testing the first line of minutes", function() {
 
         it("should return the first line of minutes", function() {
             // act
-            let result = main.getFirstLineOfMinutes(0);
+            let result = main.firstLineOfMinutes(0);
             // assert
             expect(result).toBe("-----------");
         });
 
         it("should return the first line of minutes", function() {
-            let result = main.getFirstLineOfMinutes(5);
+            let result = main.firstLineOfMinutes(5);
 
             expect(result).toBe("Y----------");
         });
 
         it("should return the first line of minutes", function() {
-            let result = main.getFirstLineOfMinutes(10);
+            let result = main.firstLineOfMinutes(10);
 
             expect(result).toBe("YY---------");
         });
 
         it("should return the first line of minutes", function() {
-            let result = main.getFirstLineOfMinutes(15);
+            let result = main.firstLineOfMinutes(15);
 
-            expect(result).toBe("YYY--------");
+            expect(result).toBe("YYR--------");
         });
 
         it("should return the first line of minutes", function() {
-            let result = main.getFirstLineOfMinutes(20);
+            let result = main.firstLineOfMinutes(20);
 
-            expect(result).toBe("YYYY-------");
+            expect(result).toBe("YYRY-------");
         });
 
         it("should return the first line of minutes", function() {
-            let result = main.getFirstLineOfMinutes(5 * 11);
+            let result = main.firstLineOfMinutes(5 * 11);
 
-            expect(result).toBe("YYYYYYYYYYY");
+            expect(result).toBe("YYRYYRYYRYY");
         });
 
         it("should return the first line of minutes", function() {
-            let result = main.getFirstLineOfMinutes(minutes); 
+            let result = main.firstLineOfMinutes(minutes); 
 
-            expect(result).toBe("YYYYYYY----");
+            expect(result).toBe("YYRYYRY----");
         });
 
     });
+
+
+describe("testing the second line of minutes", function() {
+            // arrange
+            let main = new Main();
+    
+            it("should return the second line of minutes", function() {
+                // act
+                let result = main.secondLineOfMinutes(0);
+                // assert
+                expect(result).toBe("----");
+            });
+    
+            it("should return the second line of minutes", function() {
+                let result = main.secondLineOfMinutes();
+    
+                expect(result).toBe("Y---");
+            });
+    
+            it("should return the second line of minutes", function() {
+                let result = main.secondLineOfMinutes();
+    
+                expect(result).toBe("YY--");
+            });
+    
+            it("should return the second line of minutes", function() {
+                let result = main.secondLineOfMinutes();
+    
+                expect(result).toBe("YYY-");
+            });
+    
+            it("should return the second line of minutes", function() {
+                let result = main.secondLineOfMinutes();
+    
+                expect(result).toBe("YYYY");
+            });
+    
+            it("should return the second line of minutes", function() {
+                let result = main.secondLineOfMinutes(minutes);
+    
+                expect(result).toBe("YY--");
+            });
+
+});
     
