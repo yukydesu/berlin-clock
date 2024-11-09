@@ -5,7 +5,8 @@ const timestamp = 1672501199;
 const date = new Date(timestamp * 1000);
 const hours = date.getHours();
 const minutes = date.getMinutes();  
-const seconds = date.getSeconds(); 
+const seconds = date.getSeconds();
+
 
 describe("testing the second line of minutes", function() {
             // arrange
@@ -72,6 +73,13 @@ describe("testing the second line of minutes", function() {
                 let result = main.secondLineOfMinutes(57);
                 // assert
                 expect(result).toBe("YY--");
+            });
+
+            it("with minutes => should return 'YYYY''", function() {
+                // act
+                let result = main.secondLineOfMinutes(minutes); // minutes = 39
+                // assert
+                expect(result).toBe("YYYY");
             });
 
 });
