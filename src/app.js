@@ -44,6 +44,7 @@ export class Main {
   // FIRST LINE OF HOURS
     firstLineOfHours(minutes) {
         if (minutes < 5) return "----";
+        if (minutes < 10) return "R---";
 
     }
 }
