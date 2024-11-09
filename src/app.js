@@ -1,7 +1,3 @@
-// app.js
-import { Minutes } from './minutes.js';
-
-
 export class Main {
 
     // La ligne du dessus représente des bloque de 5 minutes et elle est composée de 11 lampes. Toutes les 3 lampes nous avons une lampe rouge et les autres sont jaunes. 

@@ -14,7 +14,7 @@ describe("testing the first line of minutes", function() {
 
         it("should return the first line of minutes", function() {
             // act
-            let result = main.getFirstLineOfMinutes(0);
+            let result = main.firstLineOfMinutes(0);
             // assert
             expect(result).toBe("-----------"); // 0 / 5 = 0
         });
