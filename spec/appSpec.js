@@ -7,7 +7,7 @@ const hours = date.getHours();
 const minutes = date.getMinutes();  
 const seconds = date.getSeconds(); 
 
-describe("A suite of test for the demo function of the main class", function() { 
+describe("testing the first line of minutes", function() { 
 
         // arrange
         let main = new Main();
