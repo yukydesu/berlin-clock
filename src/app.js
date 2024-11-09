@@ -51,4 +51,14 @@ export class Main {
         if (minutes < 24) return "RRRR";
 
     }
+
+    // LINE OF SECONDS
+    lineOfSeconds(seconds) {
+        if (this.isPair(seconds)) return "-";
+        if (!this.isPair(seconds)) return "Y";
+    }
+
+    isPair(seconds) {
+        return seconds % 2 === 0;
+    }
 }
