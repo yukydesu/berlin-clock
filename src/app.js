@@ -1,9 +1,6 @@
 export class Main {
 
-
-
-
-    // SECONF LINE OF MINUTES
+    // SECOND LINE OF HOURS
     secondLineOfMinutes(minutes) {
         if (this.restOfDivisionBy5(minutes) == 0) return "----";
         if (this.restOfDivisionBy5(minutes) == 1) return "R---";
