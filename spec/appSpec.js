@@ -53,9 +53,12 @@ describe("testing the second line of minutes", function() {
                 expect(result).toBe("----");
             });
 
-            
-
-
+            it("with 6 => should return 'Y---''", function() {
+                // act
+                let result = main.secondLineOfMinutes(6);
+                // assert
+                expect(result).toBe("Y---");
+            });
 
 });
     
