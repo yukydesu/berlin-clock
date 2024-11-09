@@ -10,7 +10,6 @@ const hours = date.getHours();
 const minutes = date.getMinutes();
 const seconds = date.getSeconds();
 
-console.log("seconds: ", seconds);
 
 // FIRST LINE OF MINUTES
 describe("testing the first line of minutes", function () {
