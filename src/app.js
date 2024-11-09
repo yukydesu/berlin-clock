@@ -55,5 +55,6 @@ export class Main {
     // LINE OF SECONDS
     lineOfSeconds(seconds) {
         if (seconds === 0) return "-";
+        if (seconds === 1) return "Y";
     }
 }

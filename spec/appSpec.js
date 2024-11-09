@@ -330,4 +330,8 @@ describe("testing the line of seconds", function () {
     it("0 should return '-", function(){
         expect(main.lineOfSeconds(0)).toBe("-");
     });
+
+    it("1 should return 'Y", function(){
+        expect(main.lineOfSeconds(1)).toBe("Y");
+    });
 });
