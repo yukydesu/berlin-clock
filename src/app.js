@@ -13,8 +13,17 @@ export class Main {
 
     getFifteenMinuteQuarters(minutes) {
         if(minutes == 0) return 0;
-        if(minutes % 4 == 0) return 1;
+        if(this.isMultipleOf4(minutes)) return 1;
+        if(this.isMultipleOf5(minutes)) return 0;
         return (minutes / 4) % 1;
     }
 
+
+    isMultipleOf5(minutes) {
+        return minutes % 5 == 0;
+    }
+
+    isMultipleOf4(minutes) {
+        return minutes % 4 == 0;
+    }
 }
