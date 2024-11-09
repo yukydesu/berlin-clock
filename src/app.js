@@ -40,4 +40,10 @@ export class Main {
     if (this.restOfDivisionBy5(minutes) == 3) return "RRR-";
     if (this.restOfDivisionBy5(minutes) == 4) return "RRRR";
   }
+
+  // FIRST LINE OF HOURS
+    firstLineOfHours(minutes) {
+        if (minutes === 0) return "----";
+
+    }
 }

@@ -222,3 +222,17 @@ describe("testing the second line of minutes", function () {
     expect(result).toBe("R---");
   });
 });
+
+// FIRST LINE OF HOURS
+describe("testing the first line of hours", function () {
+    // arrange
+    let main = new Main();
+
+    it("should return '---'", function () {
+        // act
+        let result = main.firstLineOfHours(0);
+
+        expect(main.firstLineOfHours(0)).toBe('----');
+    });
+    
+});
