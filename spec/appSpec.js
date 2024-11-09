@@ -228,74 +228,109 @@ describe("testing the first line of hours", function () {
     // arrange
     let main = new Main();
 
-    it("should return '---'", function () {
+    it("0 should return '---'", function () {
         // act
         let result = main.firstLineOfHours(0);
 
         expect(main.firstLineOfHours(0)).toBe('----');
     });
 
-    it("should return '----'", function () {
+    it("1 should return '----'", function () {
         // act
         let result = main.firstLineOfHours(1);
 
         expect(main.firstLineOfHours(1)).toBe('----');
     });
 
-    it("should return '----'", function () {
+    it("2 should return '----'", function () {
         // act
         let result = main.firstLineOfHours(2);
 
         expect(main.firstLineOfHours(2)).toBe('----');
     });
 
-    it("should return '----'", function () {
+    it("3 should return '----'", function () {
         // act
         let result = main.firstLineOfHours(3);
 
         expect(main.firstLineOfHours(3)).toBe('----');
     });
 
-    it("should return '----'", function () {
+    it("4 should return '----'", function () {
         // act
         let result = main.firstLineOfHours(4);
 
         expect(main.firstLineOfHours(4)).toBe('----');
     });
 
-    it("should return '----'", function () {
+    it("5 should return 'R---'", function () {
         // act
         let result = main.firstLineOfHours(5);
 
         expect(main.firstLineOfHours(5)).toBe('R---');
     });
 
-    it("should return '----'", function () {
+    it("6 should return 'R---'", function () {
         // act
         let result = main.firstLineOfHours(6);
 
         expect(main.firstLineOfHours(6)).toBe('R---');
     });
 
-    it("should return '----'", function () {
+    it("9 should return 'R---'", function () {
         // act
         let result = main.firstLineOfHours(9);
 
         expect(main.firstLineOfHours(9)).toBe('R---');
     });
 
-    it("should return '----'", function () {
+    it("10 should return 'RR--'", function () {
         // act
         let result = main.firstLineOfHours(10);
 
         expect(main.firstLineOfHours(10)).toBe('RR--');
     });
 
-    it("should return '----'", function () {
+    it("14 should return 'RR--'", function () {
         // act
         let result = main.firstLineOfHours(14);
 
         expect(main.firstLineOfHours(14)).toBe('RR--');
+    });
+
+    it("15 should return 'RRR-'", function () {
+        // act
+        let result = main.firstLineOfHours(15);
+
+        expect(main.firstLineOfHours(15)).toBe('RRR-');
+    });
+
+    it("19 should return 'RRR-'", function () {
+        // act
+        let result = main.firstLineOfHours(19);
+
+        expect(main.firstLineOfHours(19)).toBe('RRR-');
+    });
+
+    it("20 should return 'RRRR'", function () {
+        // act
+        let result = main.firstLineOfHours(20);
+
+        expect(main.firstLineOfHours(20)).toBe('RRRR');
+    });
+
+    it("23 should return 'RRRR'", function () {
+        // act
+        let result = main.firstLineOfHours(23);
+
+        expect(main.firstLineOfHours(23)).toBe('RRRR');
+    });
+
+    it("hours should return 'RRR-'", function () {
+        // act
+        let result = main.firstLineOfHours(hours); // hours = 16
+
+        expect(result).toBe("RRR-");
     });
 
 });
