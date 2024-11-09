@@ -5,8 +5,10 @@ const timestamp = 1672501199;
 const date = new Date(timestamp * 1000);
 const hours = date.getHours();
 const minutes = date.getMinutes();  
-const seconds = date.getSeconds(); 
+const seconds = date.getSeconds();
 
+
+// FIRST LINE OF MINUTES
 describe("testing the first line of minutes", function() { 
 
         // arrange
@@ -70,4 +72,6 @@ describe("testing the first line of minutes", function() {
         });
 
     });
+
+
     
