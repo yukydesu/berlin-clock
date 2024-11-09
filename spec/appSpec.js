@@ -10,6 +10,7 @@ const hours = date.getHours();
 const minutes = date.getMinutes();
 const seconds = date.getSeconds();
 
+
 // FIRST LINE OF MINUTES
 describe("testing the first line of minutes", function () {
   // arrange
@@ -320,4 +321,46 @@ describe("testing the first line of hours", function () {
         expect(result).toBe("RRR-");
     });
 
+});
+
+// LINE OF SECONDS
+describe("testing the line of seconds", function () {
+    // arrange
+    let main = new Main();
+
+    it("0 should return '-", function(){
+        expect(main.lineOfSeconds(0)).toBe("-");
+    });
+
+    it("1 should return 'Y", function(){
+        expect(main.lineOfSeconds(1)).toBe("Y");
+    });
+
+    it("2 should return '-", function(){
+        expect(main.lineOfSeconds(2)).toBe("-");
+    });
+
+    it("3 should return 'Y", function(){
+        expect(main.lineOfSeconds(3)).toBe("Y");
+    });
+
+    it("59 should return 'Y", function(){
+        expect(main.lineOfSeconds(59)).toBe("Y");
+    });
+
+    it("seconds should return 'Y", function(){
+        expect(main.lineOfSeconds(seconds)).toBe("Y"); // seconds = 59
+    });
+});
+
+// ALL LINES
+describe("testing all lines", function () {
+    // arrange
+    let main = new Main();
+
+    it("should return all lines, in order, seconds, first line of hours, second line of hours, first line of minutes, second line of minutes", function () {
+        let result = main.berlinClock(date);
+
+        expect(result).toBe("Y\nRRR-\nR---\nYYRYYRY----\nYYYY");
+    });
 });
