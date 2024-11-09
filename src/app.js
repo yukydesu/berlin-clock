@@ -28,10 +28,6 @@ export class Main {
     if (this.restOfDivisionBy5(minutes) == 4) return "YYYY";
   }
 
-  restOfDivisionBy5(minutes) {
-    return minutes % 5;
-  }
-
   // SECOND LINE OF HOURS
   secondLineOfHours(minutes) {
     if (this.restOfDivisionBy5(minutes) == 0) return "----";
@@ -40,4 +36,19 @@ export class Main {
     if (this.restOfDivisionBy5(minutes) == 3) return "RRR-";
     if (this.restOfDivisionBy5(minutes) == 4) return "RRRR";
   }
+
+
+  restOfDivisionBy5(minutes) {
+    return minutes % 5;
+  }
+
+  // FIRST LINE OF HOURS
+    firstLineOfHours(minutes) {
+        if (minutes < 5) return "----";
+        if (minutes < 10) return "R---";
+        if (minutes < 15) return "RR--";
+        if (minutes < 20) return "RRR-";
+        if (minutes < 24) return "RRRR";
+
+    }
 }
