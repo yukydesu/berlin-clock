@@ -334,4 +334,16 @@ describe("testing the line of seconds", function () {
     it("1 should return 'Y", function(){
         expect(main.lineOfSeconds(1)).toBe("Y");
     });
+
+    it("2 should return '-", function(){
+        expect(main.lineOfSeconds(2)).toBe("-");
+    });
+
+    it("3 should return 'Y", function(){
+        expect(main.lineOfSeconds(3)).toBe("Y");
+    });
+
+    it("59 should return 'Y", function(){
+        expect(main.lineOfSeconds(59)).toBe("Y");
+    });
 });

@@ -54,7 +54,11 @@ export class Main {
 
     // LINE OF SECONDS
     lineOfSeconds(seconds) {
-        if (seconds === 0) return "-";
-        if (seconds === 1) return "Y";
+        if (this.isPair(seconds)) return "-";
+        if (!this.isPair(seconds)) return "Y";
+    }
+
+    isPair(seconds) {
+        return seconds % 2 === 0;
     }
 }
