@@ -3,6 +3,7 @@ export class Main {
 
  // La ligne du dessus représente des bloque de 5 minutes et elle est composée de 11 lampes. Toutes les 3 lampes nous avons une lampe rouge et les autres sont jaunes. 
  
+
  firstLineOfMinutes(minutes) {
     if (this.getFiveMinuteQuarters(minutes) < 2) return "Y----------";
     if (this.getFiveMinuteQuarters(minutes) < 3) return "YY---------";
@@ -17,22 +18,22 @@ export class Main {
     if (this.getFiveMinuteQuarters(minutes) < 12) return "YYRYYRYYRYY";
 }
 
-// La ligne du bas est composée de 4 bloques jaunes représentant chacun une minute
+    // La ligne du bas est composée de 4 bloques jaunes représentant chacun une minute
 
-secondLineOfMinutes(minutes) {
-    if (minutes == 0) return "----";
-    if (this.getFifteenMinuteQuarters(minutes) == 1) return "Y---";
-    if (this.getFifteenMinuteQuarters(minutes) == 2) return "YY--";
-    if (this.getFifteenMinuteQuarters(minutes) == 3) return "YYY-";
-    if (this.getFifteenMinuteQuarters(minutes) == 0) return "YYYY";
-}
+    secondLineOfMinutes(minutes) {
+        if (minutes == 0) return "----";
+        if (this.getFifteenMinuteQuarters(minutes) == 1) return "Y---";
+        if (this.getFifteenMinuteQuarters(minutes) == 2) return "YY--";
+        if (this.getFifteenMinuteQuarters(minutes) == 3) return "YYY-";
+        if (this.getFifteenMinuteQuarters(minutes) == 0) return "YYYY";
+    }
 
-getFiveMinuteQuarters(minutes) {
-    return minutes / 5;
-}
+    getFiveMinuteQuarters(minutes) {
+        return minutes / 5;
+    }
 
-getFifteenMinuteQuarters(minutes) {
-    return minutes / 4;
-}
+    getFifteenMinuteQuarters(minutes) {
+        return minutes / 4;
+    }
 
 }
