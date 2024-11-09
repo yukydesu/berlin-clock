@@ -61,4 +61,18 @@ export class Main {
     isPair(seconds) {
         return seconds % 2 === 0;
     }
+
+    // BERLIN CLOCK
+    berlinClock(date) {
+
+        const hours = date.getHours();
+        const minutes = date.getMinutes();  
+        const seconds = date.getSeconds();
+
+        return this.lineOfSeconds(seconds) + "\n" +
+            this.firstLineOfHours(hours) + "\n" +
+            this.secondLineOfHours(hours) + "\n" +
+            this.firstLineOfMinutes(minutes) + "\n" +
+            this.secondLineOfMinutes(minutes);
+    }
 }

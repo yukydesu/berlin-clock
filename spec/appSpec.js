@@ -352,3 +352,15 @@ describe("testing the line of seconds", function () {
         expect(main.lineOfSeconds(seconds)).toBe("Y"); // seconds = 59
     });
 });
+
+// ALL LINES
+describe("testing all lines", function () {
+    // arrange
+    let main = new Main();
+
+    it("should return all lines, in order, seconds, first line of hours, second line of hours, first line of minutes, second line of minutes", function () {
+        let result = main.berlinClock(date);
+
+        expect(result).toBe("Y\nRRR-\nR---\nYYRYYRY----\nYYYY");
+    });
+});
