@@ -10,6 +10,8 @@ const hours = date.getHours();
 const minutes = date.getMinutes();
 const seconds = date.getSeconds();
 
+console.log("seconds: ", seconds);
+
 // FIRST LINE OF MINUTES
 describe("testing the first line of minutes", function () {
   // arrange
@@ -345,5 +347,9 @@ describe("testing the line of seconds", function () {
 
     it("59 should return 'Y", function(){
         expect(main.lineOfSeconds(59)).toBe("Y");
+    });
+
+    it("seconds should return 'Y", function(){
+        expect(main.lineOfSeconds(seconds)).toBe("Y"); // seconds = 59
     });
 });
