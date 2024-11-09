@@ -21,5 +21,4 @@ export class Main {
     getFiveMinuteQuarters(minutes) {
         return minutes / 5; 
     }
-
 }
