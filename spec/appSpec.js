@@ -284,4 +284,11 @@ describe("testing the first line of hours", function () {
         expect(main.firstLineOfHours(9)).toBe('R---');
     });
 
+    it("should return '----'", function () {
+        // act
+        let result = main.firstLineOfHours(10);
+
+        expect(main.firstLineOfHours(10)).toBe('RR--');
+    });
+
 });
