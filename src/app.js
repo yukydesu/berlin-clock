@@ -29,26 +29,26 @@ export class Main {
   }
 
   // SECOND LINE OF HOURS
-  secondLineOfHours(minutes) {
-    if (this.restOfDivisionBy5(minutes) == 0) return "----";
-    if (this.restOfDivisionBy5(minutes) == 1) return "R---";
-    if (this.restOfDivisionBy5(minutes) == 2) return "RR--";
-    if (this.restOfDivisionBy5(minutes) == 3) return "RRR-";
-    if (this.restOfDivisionBy5(minutes) == 4) return "RRRR";
+  secondLineOfHours(hours) {
+    if (this.restOfDivisionBy5(hours) == 0) return "----";
+    if (this.restOfDivisionBy5(hours) == 1) return "R---";
+    if (this.restOfDivisionBy5(hours) == 2) return "RR--";
+    if (this.restOfDivisionBy5(hours) == 3) return "RRR-";
+    if (this.restOfDivisionBy5(hours) == 4) return "RRRR";
   }
 
 
-  restOfDivisionBy5(minutes) {
-    return minutes % 5;
+  restOfDivisionBy5(number) {
+    return number % 5;
   }
 
   // FIRST LINE OF HOURS
-    firstLineOfHours(minutes) {
-        if (minutes < 5) return "----";
-        if (minutes < 10) return "R---";
-        if (minutes < 15) return "RR--";
-        if (minutes < 20) return "RRR-";
-        if (minutes < 24) return "RRRR";
+    firstLineOfHours(hours) {
+        if (hours < 5) return "----";
+        if (hours < 10) return "R---";
+        if (hours < 15) return "RR--";
+        if (hours < 20) return "RRR-";
+        if (hours < 24) return "RRRR";
 
     }
 
