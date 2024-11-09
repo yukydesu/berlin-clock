@@ -17,3 +17,5 @@ let result = main.berlinClock(date);
 console.log(result);
 
 
+// TODO: Add more tests
+
