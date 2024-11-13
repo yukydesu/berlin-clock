@@ -18,3 +18,33 @@ Le programme affiche l'heure en utilisant une série de lampes disposées comme 
 
 Objectif pédagogique
 Cet exercice est idéal pour pratiquer le TDD et le pair programming, des méthodes très utilisées en développement logiciel.
+
+Installation
+------------
+
+1. Clonez le dépôt :
+    ```sh
+    git clone <URL_DU_DEPOT>
+    ```
+
+2. Accédez au répertoire du projet :
+    ```sh
+    cd berlin-clock
+    ```
+
+3. Installez les dépendances :
+    ```sh
+    npm install
+    ```
+
+4. Installez Jasmine globalement (si ce n'est pas déjà fait) :
+    ```sh
+    npm install jasmine
+    ```
+
+5. Exécutez les tests pour vérifier que tout fonctionne correctement :
+    ```sh
+    npm test
+    ```
+
+
