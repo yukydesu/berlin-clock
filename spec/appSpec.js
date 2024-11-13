@@ -372,9 +372,6 @@ describe("testing all lines", function () {
 
     it("should return all lines, in order, seconds, first line of hours, second line of hours, first line of minutes, second line of minutes", function () {
         let result = main.berlinClock(date);
-
-        console.log("\n" + result);
-
         expect(result).toBe("Y\nRRR-\nR---\nYYRYYRY----\nYYYY");
     });
 });
