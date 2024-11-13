@@ -10,7 +10,6 @@ const hours = date.getHours();
 const minutes = date.getMinutes();
 const seconds = date.getSeconds();
 
-
 // FIRST LINE OF MINUTES
 describe("testing the first line of minutes", function () {
   // arrange
@@ -226,152 +225,150 @@ describe("testing the second line of minutes", function () {
 
 // FIRST LINE OF HOURS
 describe("testing the first line of hours", function () {
-    // arrange
-    let main = new Main();
+  // arrange
+  let main = new Main();
 
-    it("0 should return '---'", function () {
-        // act
-        let result = main.firstLineOfHours(0);
+  it("0 should return '---'", function () {
+    // act
+    let result = main.firstLineOfHours(0);
 
-        expect(result).toBe('----');
-    });
+    expect(result).toBe("----");
+  });
 
-    it("1 should return '----'", function () {
-        let result = main.firstLineOfHours(1);
+  it("1 should return '----'", function () {
+    let result = main.firstLineOfHours(1);
 
-        expect(result).toBe('----');
-    });
+    expect(result).toBe("----");
+  });
 
-    it("2 should return '----'", function () {
-        let result = main.firstLineOfHours(2);
+  it("2 should return '----'", function () {
+    let result = main.firstLineOfHours(2);
 
-        expect(result).toBe('----');
-    });
+    expect(result).toBe("----");
+  });
 
-    it("3 should return '----'", function () {
-        let result = main.firstLineOfHours(3);
+  it("3 should return '----'", function () {
+    let result = main.firstLineOfHours(3);
 
-        expect(result).toBe('----');
-    });
+    expect(result).toBe("----");
+  });
 
-    it("4 should return '----'", function () {
-        let result = main.firstLineOfHours(4);
+  it("4 should return '----'", function () {
+    let result = main.firstLineOfHours(4);
 
-        expect(result).toBe('----');
-    });
+    expect(result).toBe("----");
+  });
 
-    it("5 should return 'R---'", function () {
-        let result = main.firstLineOfHours(5);
+  it("5 should return 'R---'", function () {
+    let result = main.firstLineOfHours(5);
 
-        expect(result).toBe('R---');
-    });
+    expect(result).toBe("R---");
+  });
 
-    it("6 should return 'R---'", function () {
-        let result = main.firstLineOfHours(6);
+  it("6 should return 'R---'", function () {
+    let result = main.firstLineOfHours(6);
 
-        expect(result).toBe('R---');
-    });
+    expect(result).toBe("R---");
+  });
 
-    it("9 should return 'R---'", function () {
-        let result = main.firstLineOfHours(9);
+  it("9 should return 'R---'", function () {
+    let result = main.firstLineOfHours(9);
 
-        expect(result).toBe('R---');
-    });
+    expect(result).toBe("R---");
+  });
 
-    it("10 should return 'RR--'", function () {
+  it("10 should return 'RR--'", function () {
+    let result = main.firstLineOfHours(10);
 
-        let result = main.firstLineOfHours(10);
+    expect(result).toBe("RR--");
+  });
 
-        expect(result).toBe('RR--');
-    });
+  it("14 should return 'RR--'", function () {
+    let result = main.firstLineOfHours(14);
 
-    it("14 should return 'RR--'", function () {
-        let result = main.firstLineOfHours(14);
+    expect(result).toBe("RR--");
+  });
 
-        expect(result).toBe('RR--');
-    });
+  it("15 should return 'RRR-'", function () {
+    let result = main.firstLineOfHours(15);
 
-    it("15 should return 'RRR-'", function () {
-        let result = main.firstLineOfHours(15);
+    expect(result).toBe("RRR-");
+  });
 
-        expect(result).toBe('RRR-');
-    });
+  it("19 should return 'RRR-'", function () {
+    let result = main.firstLineOfHours(19);
 
-    it("19 should return 'RRR-'", function () {
-        let result = main.firstLineOfHours(19);
+    expect(result).toBe("RRR-");
+  });
 
-        expect(result).toBe('RRR-');
-    });
+  it("20 should return 'RRRR'", function () {
+    let result = main.firstLineOfHours(20);
 
-    it("20 should return 'RRRR'", function () {
-        let result = main.firstLineOfHours(20);
+    expect(result).toBe("RRRR");
+  });
 
-        expect(result).toBe('RRRR');
-    });
+  it("23 should return 'RRRR'", function () {
+    let result = main.firstLineOfHours(23);
 
-    it("23 should return 'RRRR'", function () {
-        let result = main.firstLineOfHours(23);
+    expect(result).toBe("RRRR");
+  });
 
-        expect(result).toBe('RRRR');
-    });
+  it("hours should return 'RRR-'", function () {
+    let result = main.firstLineOfHours(hours); // hours = 16
 
-    it("hours should return 'RRR-'", function () {
-        let result = main.firstLineOfHours(hours); // hours = 16
-
-        expect(result).toBe("RRR-");
-    });
-
+    expect(result).toBe("RRR-");
+  });
 });
 
 // LINE OF SECONDS
 describe("testing the line of seconds", function () {
-    // arrange
-    let main = new Main();
+  // arrange
+  let main = new Main();
 
-    it("0 should return '-", function(){
-      let result = main.lineOfSeconds(0);
+  it("0 should return '-", function () {
+    let result = main.lineOfSeconds(0);
 
-      expect(result).toBe("-");
-    });
+    expect(result).toBe("-");
+  });
 
-    it("1 should return 'Y", function(){
-      let result = main.lineOfSeconds(1);
+  it("1 should return 'Y", function () {
+    let result = main.lineOfSeconds(1);
 
-      expect(result).toBe("Y");
-    });
+    expect(result).toBe("Y");
+  });
 
-    it("2 should return '-", function(){
-      let result = main.lineOfSeconds(2);
+  it("2 should return '-", function () {
+    let result = main.lineOfSeconds(2);
 
-      expect(result).toBe("-");
-    });
+    expect(result).toBe("-");
+  });
 
-    it("3 should return 'Y", function(){
-      let result = main.lineOfSeconds(3);
+  it("3 should return 'Y", function () {
+    let result = main.lineOfSeconds(3);
 
-      expect(result).toBe("Y");
-    });
+    expect(result).toBe("Y");
+  });
 
-    it("59 should return 'Y", function(){
-      let result = main.lineOfSeconds(59);
+  it("59 should return 'Y", function () {
+    let result = main.lineOfSeconds(59);
 
-      expect(result).toBe("Y");
-    });
+    expect(result).toBe("Y");
+  });
 
-    it("seconds should return 'Y", function(){
-      let result = main.lineOfSeconds(seconds); // seconds = 59
+  it("seconds should return 'Y", function () {
+    let result = main.lineOfSeconds(seconds); // seconds = 59
 
-      expect(result).toBe("Y"); // seconds = 59
-    });
+    expect(result).toBe("Y"); // seconds = 59
+  });
 });
 
 // ALL LINES
 describe("testing all lines", function () {
-    // arrange
-    let main = new Main();
+  // arrange
+  let main = new Main();
 
-    it("should return all lines, in order, seconds, first line of hours, second line of hours, first line of minutes, second line of minutes", function () {
-        let result = main.berlinClock(date);
-        expect(result).toBe("Y\nRRR-\nR---\nYYRYYRY----\nYYYY");
-    });
+  it("should return all lines, in order, seconds, first line of hours, second line of hours, first line of minutes, second line of minutes", function () {
+    let result = main.berlinClock(date);
+    expect(result).toBe("Y\nRRR-\nR---\nYYRYYRY----\nYYYY");
+  });
 });

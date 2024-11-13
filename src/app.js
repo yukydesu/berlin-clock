@@ -37,42 +37,45 @@ export class Main {
     if (this.restOfDivisionBy5(hours) == 4) return "RRRR";
   }
 
-
   restOfDivisionBy5(number) {
     return number % 5;
   }
 
   // FIRST LINE OF HOURS
-    firstLineOfHours(hours) {
-        if (hours < 5) return "----";
-        if (hours < 10) return "R---";
-        if (hours < 15) return "RR--";
-        if (hours < 20) return "RRR-";
-        if (hours < 24) return "RRRR";
+  firstLineOfHours(hours) {
+    if (hours < 5) return "----";
+    if (hours < 10) return "R---";
+    if (hours < 15) return "RR--";
+    if (hours < 20) return "RRR-";
+    if (hours < 24) return "RRRR";
+  }
 
-    }
+  // LINE OF SECONDS
+  lineOfSeconds(seconds) {
+    if (this.isPair(seconds)) return "-";
+    if (!this.isPair(seconds)) return "Y";
+  }
 
-    // LINE OF SECONDS
-    lineOfSeconds(seconds) {
-        if (this.isPair(seconds)) return "-";
-        if (!this.isPair(seconds)) return "Y";
-    }
+  isPair(seconds) {
+    return seconds % 2 === 0;
+  }
 
-    isPair(seconds) {
-        return seconds % 2 === 0;
-    }
+  // BERLIN CLOCK
+  berlinClock(date) {
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const seconds = date.getSeconds();
 
-    // BERLIN CLOCK
-    berlinClock(date) {
-
-        const hours = date.getHours();
-        const minutes = date.getMinutes();  
-        const seconds = date.getSeconds();
-
-        return this.lineOfSeconds(seconds) + "\n" +
-            this.firstLineOfHours(hours) + "\n" +
-            this.secondLineOfHours(hours) + "\n" +
-            this.firstLineOfMinutes(minutes) + "\n" +
-            this.secondLineOfMinutes(minutes);
-    }
+    return (
+      this.lineOfSeconds(seconds) +
+      "\n" +
+      this.firstLineOfHours(hours) +
+      "\n" +
+      this.secondLineOfHours(hours) +
+      "\n" +
+      this.firstLineOfMinutes(minutes) +
+      "\n" +
+      this.secondLineOfMinutes(minutes)
+    );
+  }
 }
